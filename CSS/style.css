@@ -42,3 +42,7 @@ body {
   font-size: 3em;
   font-weight: bold;
 }
+
+.bg-footer {
+    background-color: #000042 !important; 
+}
