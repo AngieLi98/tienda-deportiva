@@ -1,3 +1,11 @@
 body {
     background-color: aquamarine;
 }
+
+.card {
+  text-align: center;        /* centra el texto */
+  display: flex;             /* activa flexbox */
+  flex-direction: column;    /* organiza elementos en columna */
+  align-items: center;       /* centra horizontalmente */
+  justify-content: center;   /* centra verticalmente si hay altura */
+}
