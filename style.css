@@ -1,3 +1,7 @@
 body {
     background-color: aquamarine;
 }
+
+.bg-footer {
+    background-color: #000042 !important; 
+}
