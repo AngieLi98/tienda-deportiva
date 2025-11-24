@@ -39,7 +39,7 @@ const productos = [
   {
     id: 7,
     nombre: "Traje de Baño morado",
-    precio: 120.900,
+    precio: 120900,
     imagen: "../img/Traje de baño morado.webp"
   },
   {

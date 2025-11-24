@@ -1,31 +1,35 @@
-// Seleccionamos todas las tarjetas que tienen la clase "card"
 let tarjetas = document.querySelectorAll(".card");
 
 // Recorremos cada tarjeta encontrada
 tarjetas.forEach(card => {
-  // Obtenemos el valor del atributo "data-id" de la tarjeta actual
-  let id = card.getAttribute("data-id");
+    let id = card.getAttribute("data-id");
+    let idNumerico = parseInt(id);
 
-  // Usamos el id para acceder al producto correspondiente en el array 'productos'
-  // (restamos 1 porque los arrays empiezan en índice 0)
-  let producto = productos[id - 1]; // Asegúrate de que el array 'productos' esté bien definido
+  
+    let producto = productos[idNumerico - 1]; 
+    if (producto) { 
+        let info = card.querySelector(".info");
+        let acciones = card.querySelector(".acciones"); 
 
-  // Buscamos el contenedor interno ".info" dentro de la tarjeta
-  let info = card.querySelector(".info");
+     
+        info.innerHTML =
+            '<img src="' + producto.imagen + '" alt="' + producto.nombre + '" width="150">' +
+            '<h5>' + producto.nombre + '</h5>' +
+            '<p>Precio: $' + producto.precio.toLocaleString('es-CO') + '</p>'; 
+        
+        if (acciones) {
+            acciones.innerHTML = 
+                '<button class="btn btn-primary btn-agregar mt-2" data-id="' + id + '">Agregar al Carrito</button>';
+        }
 
-  // Reemplazamos el contenido de ".info" con los datos del producto:
-  // imagen, nombre y precio
-  info.innerHTML =
-    '<img src="' + producto.imagen + '" alt="' + producto.nombre + '" width="150">' +
-    '<h5>' + producto.nombre + '</h5>' +
-    '<p>Precio: $' + producto.precio + '</p>'
-
+    } else {
+        console.error(`Error: No se encontró el producto con ID ${id}`);
+    }
 });
-
 //funcion
- 
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
- 
+
 function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
@@ -33,19 +37,49 @@ function guardarCarrito() {
 function agregarAlCarrito(idProducto) {
     const id = parseInt(idProducto);
     const item = productos.find(p => p.id === id);
- 
+
     if (!item) return;
- 
+
     const existe = carrito.find(prod => prod.id === id);
- 
+
     if (existe) {
         existe.cantidad++;
     } else {
-        carrito.push({...item, cantidad: 1});
+        carrito.push({ ...item, cantidad: 1 });
     }
- 
-    guardarCarrito(); // actualizar el carrito actualizado
-    actualizarCarritoUI(); //refrescar
-    animacionProductoAgregado(item.nombre); 
 
-  }
+
+    guardarCarrito();
+    actualizarCarritoUI();
+    animacionProductoAgregado(item.nombre)
+
+
+
+}
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-agregar')) {
+        let productoId = e.target.getAttribute('data-id');
+        agregarAlCarrito(productoId);
+    }
+});
+
+
+function actualizarCarritoUI() {
+    const totalItems = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+    const contador = document.getElementById("contador-carrito");
+
+    if (contador) {
+        contador.textContent = totalItems;
+        contador.style.display = totalItems > 0 ? 'inline-block' : 'none';
+    }
+}
+
+function animacionProductoAgregado(nombreProducto) {
+    // Muestra un mensaje simple de confirmación
+    alert(`🛒 ¡Producto agregado! "${nombreProducto}" se ha añadido al carrito.`);
+}
+
+
+
+document.addEventListener('DOMContentLoaded', actualizarCarritoUI);
