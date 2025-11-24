@@ -53,6 +53,12 @@ main {
   font-weight: bold;
 }
 
-.bg-footer {
-    background-color: #000042 !important; 
+.footer {
+    background-color: #000042; 
 }
+.footer img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
