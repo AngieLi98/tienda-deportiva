@@ -36,7 +36,6 @@ main {
   background-color: #F7ECE1;
 }
 
-
 .banner {
   position: relative;
   width: 100%;
@@ -58,9 +57,36 @@ main {
   font-weight: bold;
 }
 
-.info {
-  background-color: #000042;
+h2 {
+  font-size: 48px;
+  text-align: center;
+  margin: 20px;
+  color: #000042;
+}
 
+.card-valores {
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-height: 250px;
+}
+
+.card-valores h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-comodidad {
+    background-color: #F5E6D3; 
+}
+
+.card-calidad {
+    background-color: #C8C8C8; 
+}
+
+.card-diseno {
+    background-color: #F5EBE0;
 }
 
 .footer {
@@ -72,3 +98,18 @@ main {
     object-fit: contain;
 }
 
+.card {
+  text-align: center;        /* centra el texto */
+  display: flex;             /* activa flexbox */
+  flex-direction: column;    /* organiza elementos en columna */
+  align-items: center;       /* centra horizontalmente */
+  justify-content: center;   /* centra verticalmente si hay altura */
+  width: 290px;   /* ancho fijo */
+  height: 350px;  /* alto fijo */
+  margin: 0 auto; /* centra la tarjeta dentro de la columna */
+
+}
+
+.card img {
+  margin-top: 20px; /* ajusta el margen de la imagen */
+}
