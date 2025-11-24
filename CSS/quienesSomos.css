@@ -30,3 +30,28 @@ body {
     height: auto;
     object-fit: contain;
 }
+
+.card-valores {
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    min-height: 250px;
+}
+
+.card-valores h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-comodidad {
+    background-color: #F5E6D3; 
+}
+
+.card-calidad {
+    background-color: #C8C8C8; 
+}
+
+.card-diseno {
+    background-color: #F5EBE0;
+}
