@@ -23,7 +23,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse nav-pills" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#scrollspyHeading1">Inicio</a>
                         </li>
@@ -31,13 +31,14 @@
                             <a class="nav-link" href="#scrollspyHeading2">Quienes somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
-                                    <path
-                                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                </svg></a>
+                            <a class="nav-link"><button type="button" class="btn btn-primary position-relative">
+                                    <i class="bi bi-cart-plus"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        0
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button></a>
                         </li>
                     </ul>
                 </div>
@@ -275,34 +276,34 @@
         </div>
         <hr>
         <section id="scrollspyHeading2" class="container my-5">
-            
+
             <div class="row">
-                
+
                 <!-- COLUMNA IZQUIERDA: Texto de la misión -->
                 <div class="col-md-6">
-                
-                    
+
+
                     <h1>Nuestra misión: Tu rendimiento con estilo</h1>
-                    
+
                     <p>
-                        En Aquastyle, creemos que la natación es más que un deporte; 
+                        En Aquastyle, creemos que la natación es más que un deporte;
                         esa sensación de libertad y paz que solo el agua puede dar.
                     </p>
-                    
+
                     <p>
-                        Nuestra misión es simple: hacer que la alegría de nadar sea 
-                        accesible para todos, ofreciéndote el equilibrio perfecto entre 
-                        rendimiento técnico y estilo personal. Después de todo, tu ropa 
+                        Nuestra misión es simple: hacer que la alegría de nadar sea
+                        accesible para todos, ofreciéndote el equilibrio perfecto entre
+                        rendimiento técnico y estilo personal. Después de todo, tu ropa
                         de baño debe ser un impulso, no un obstáculo.
                     </p>
                 </div>
 
                 <!-- COLUMNA DERECHA: Imagen de nadadora -->
                 <div class="col-md-6">
-                
+
                     <img src="../imagenes/nadadora.jpg" alt="Nadadora profesional" width="400" height="500">
                 </div>
-                
+
             </div>
         </section>
 
@@ -311,25 +312,25 @@
 
         <!-- SECCIÓN 3: ¿QUIÉNES SOMOS? -->
         <section class="container my-5">
-            
+
             <h2>¿Quiénes somos?</h2>
-            
+
             <p>
-                Somos un equipo de apasionados por la natación y entusiastas 
-                del agua. Como tú, sabemos lo importante que es sentirse 
+                Somos un equipo de apasionados por la natación y entusiastas
+                del agua. Como tú, sabemos lo importante que es sentirse
                 cómodo, seguro y con buen aspecto al sumergirse.
             </p>
-            
+
             <p>
-                Por eso, diseñamos y seleccionamos cada traje y accesorio 
-                bajo un principio clave: la funcionalidad sin sacrificar 
+                Por eso, diseñamos y seleccionamos cada traje y accesorio
+                bajo un principio clave: la funcionalidad sin sacrificar
                 la estética.
             </p>
-            
+
         </section>
 
         <section class="container my-5">
-            
+
             <div class="row">
 
                 <!-- Cuadro COMODIDAD -->
@@ -337,7 +338,7 @@
                     <div class="card-valores card-comodidad">
                         <h3>COMODIDAD</h3>
                         <p>
-                            Nuestras prendas se sienten como una segunda piel, 
+                            Nuestras prendas se sienten como una segunda piel,
                             brindándote total libertad de movimiento.
                         </p>
                     </div>
@@ -347,10 +348,10 @@
                     <div class="card-valores card-calidad">
                         <h3>CALIDAD</h3>
                         <p>
-                            Utilizamos materiales resistentes al cloro y al sol, 
+                            Utilizamos materiales resistentes al cloro y al sol,
                             para que tu equipo te acompañe por muchas temporadas.
                         </p>
-                     </div>
+                    </div>
                 </div>
 
                 <!-- Cuadro DISEÑO -->
@@ -358,12 +359,12 @@
                     <div class="card-valores card-diseno">
                         <h3>DISEÑO</h3>
                         <p>
-                            Creemos en la belleza de lo funcional que te hace 
+                            Creemos en la belleza de lo funcional que te hace
                             ver bien, sin esfuerzo.
                         </p>
                     </div>
                 </div>
-                
+
             </div>
         </section>
     </main>
