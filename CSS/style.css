@@ -22,6 +22,11 @@ body {
     color: #f5993d;
 }
 
+.navbar-toggler-icon {
+  background-color: #F7ECE1;
+}
+
+
 .banner {
   position: relative;
   width: 100%;
