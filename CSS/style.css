@@ -58,6 +58,11 @@ main {
   font-weight: bold;
 }
 
+.info {
+  background-color: #000042;
+
+}
+
 .footer {
     background-color: #000042; 
 }
